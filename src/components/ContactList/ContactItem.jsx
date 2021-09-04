@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import s from './ContactList.module.css';
 
 function ContactItem({ name, number, children }) {
@@ -8,5 +9,11 @@ function ContactItem({ name, number, children }) {
     </li>
   );
 }
+
+ContactItem.propTypes = {
+  name: PropTypes.string,
+  number: PropTypes.string,
+  children: PropTypes.node,
+};
 
 export default ContactItem;
